@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { BookProvider } from './Book/reducer/BookContext';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BookProvider>
+      <App />
+    </BookProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
